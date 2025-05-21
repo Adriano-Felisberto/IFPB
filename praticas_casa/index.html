@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Página de Login</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="script.js"/>
+  </head>
+
+  <body>
+    <h1>Página de LOGIN</h1>
+
+    <form id="FL">
+      <!-- Cria um formulário. Com o ID, podemos aplicar estilos ou scripts específicos a ele. -->
+
+      <label for="nome">Usuário:</label>
+      <!-- Define o nome do campo. O atributo "for" se conecta ao id do input correspondente. -->
+
+      <input type="text" id="nome" name="nome" required />
+      <!-- Campo de entrada de texto. Pode ser do tipo text, password, email, etc. -->
+
+      <br /><br /> <!-- Quebra de linha dupla para espaçamento -->
+
+      <label for="senha">Senha:</label>
+      <!-- Mesmo funcionamento do label acima -->
+
+      <input type="password" id="senha" name="senha" required />
+      <!-- Campo do tipo senha. Os caracteres aparecem como bolinhas -->
+
+      <br /><br />
+
+      <button id="enviar" type="submit">Logar</button>
+      <!-- Cria um botão de envio. Pode disparar funções JavaScript ou redirecionar com links. -->
+    </form>
+
+    <!-- Local onde o resultado (print dos dados) será exibido -->
+    <div id="resultado" style="margin-top: 20px; color: white; text-align: center;"></div>
+
+    <!-- Script JavaScript que exibe os dados digitados -->
+    <script>
+      const form = document.getElementById("FL");
+      const resultado = document.getElementById("resultado");
+      const nome = document.getElementById("nome");
+      const senha = document.getElementById("senha");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Impede o envio do formulário e recarregamento da página
+
+        resultado.innerHTML = `
+          <h2>Dados Recebidos:</h2>
+          <p><strong>Usuário:</strong> ${nome.value}</p>
+          <p><strong>Senha:</strong> ${senha.value}</p>
+        `;
+      });
+    </script>
+  </body>
+</html>

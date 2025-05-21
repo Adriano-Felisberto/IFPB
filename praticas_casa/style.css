@@ -1,0 +1,68 @@
+/*p: seleciona todos os parágrafos
+
+.classe: seleciona elementos com uma classe
+
+#id: seleciona um elemento com um ID
+
+*: seleciona todos os elementos
+
+color: cor do texto
+
+background-color: cor de fundo 
+
+font-size: tamanho da fonte (ex: 16px, 1.2em)
+
+font-family: tipo da fonte (ex: Arial, Verdana)
+
+font-weight: peso da fonte (ex: normal, bold)
+
+text-align: alinhamento (left, center, right)
+
+text-decoration: sublinhado, nenhum, etc.
+
+width: largura
+
+height: altura
+
+padding: espaço dentro da borda
+
+margin: espaço fora da borda
+
+border: adiciona borda
+
+border-radius: bordas arredondadas
+
+block: quebra linha (ocupa largura total)
+
+inline: fica na mesma linha que outros
+
+inline-block: mistura dos dois
+
+none: esconde o elemento
+
+visibility: hidden;: esconde, mas o espaço ainda existe
+
+box-shadow: adiciona sombra
+
+:hover: quando o mouse passa por cima, DENTRO DA TAG ID OU CLASS
+
+transition: cria efeitos suaves
+
+
+  background-color: #3498db; /* Cor de fundo */
+ /* color: white;              /* Cor do texto */
+ /* padding: 10px 20px;        /* Espaço interno */
+  /*border: none;              /* Remove a borda padrão */
+  /*border-radius: 5px;        /* Bordas arredondadas */
+  /*font-size: 16px;           /* Tamanho da fonte */
+  /*cursor: pointer;           /* Muda o cursor para mãozinha */*/
+  /*background-color: #2980b9; /* Cor mais escura ao passar o mouse */
+  /*transition: background-color 0.3s ease;*/
+
+
+body {
+    background-color:(181, 71, 71);
+}
+*p {
+  color: red;
+}
