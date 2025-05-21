@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<!-- Diz ao navegador que estamos usando HTML5 -->
+
+<html lang="pt-BR">
+<!-- Início da página em HTML. O idioma da página é português do Brasil -->
+
+  <head>
+    <!-- Parte da página que não aparece diretamente para o usuário -->
+
+    <meta charset="utf-8" />
+    <!-- Define o tipo de letras e símbolos que a página aceita (com acentos, por exemplo) -->
+
+    <title>Página de Login</title>
+    <!-- Título que aparece na aba do navegador -->
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- Liga um arquivo de estilo (CSS) à página para deixar ela mais bonita -->
+
+    <link href="script.js" />
+    <!-- Esta linha está errada. Para usar um arquivo JS, o certo seria: <script src="script.js"></script> -->
+  </head>
+    <style>
+      body{
+     background-color: gray;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        color: white;
+      }
+
+      /* Estilo para listas não ordenadas (com bolinhas) */
+      ul {
+        list-style-type: disc;
+        padding-left: 20px;
+        text-align: left;
+        display: inline-block;
+      }
+
+      /* Estilo para listas ordenadas (com números) */
+      ol {
+        list-style-type: decimal;
+        padding-left: 20px;
+        text-align: left;
+        display: inline-block;
+      }
+
+      /* Estilo para listas de definição */
+      dl {
+        text-align: left;
+        display: inline-block;
+        padding-left: 20px;
+      }
+
+      dt {
+        font-weight: bold;
+        margin-top: 10px;
+      }
+
+      dd {
+        margin-left: 20px;
+      }
+
+      li {
+        margin-bottom: 5px;
+      }
+    </style>
+  <body>
+    <!-- Parte visível da página -->
+
+    <h1>Página de LOGIN</h1>
+    <!-- Título grande na tela -->
+
+    <form id="FL">
+      <!-- Cria um formulário. Usamos o ID para identificar no JavaScript ou CSS -->
+
+      <label for="nome">Usuário:</label>
+      <!-- Texto que aparece ao lado do campo. Está ligado ao input com id="nome" -->
+
+      <input type="text" id="nome" name="nome" required />
+      <!-- Campo onde a pessoa digita o nome. "required" quer dizer que precisa preencher -->
+
+      <br /><br />
+      <!-- Pula duas linhas -->
+
+      <label for="senha">Senha:</label>
+      <!-- Texto para o campo de senha -->
+
+      <input type="password" id="senha" name="senha" required />
+      <!-- Campo onde a pessoa digita a senha (os caracteres ficam escondidos) -->
+
+      <br /><br />
+
+      <p>Qual país ganhou a olimpíada de programação?</p>
+      <!-- Pergunta simples -->
+
+      <!-- Opções com botões de seleção (só dá pra escolher um) -->
+      <input type="radio" value="1" name="conjunto" /><label>Brasil</label>
+      <input type="radio" value="2" name="conjunto" /><label>EUA</label>
+      <input type="radio" value="3" name="conjunto" /><label>Japão</label>
+      <input type="radio" value="4" name="conjunto" /><label>China</label>
+
+      <br /><br />
+
+      <p>Qual país ganhou a olimpíada de programação?</p>
+      <!-- Mesma pergunta, mas agora com caixas para marcar (pode escolher mais de um) -->
+
+      <!-- Caixas de seleção (checkbox) -->
+      <input type="checkbox" value="1" name="conjunto" /><label>Brasil</label>
+      <input type="checkbox" value="2" name="conjunto" /><label>EUA</label>
+      <input type="checkbox" value="3" name="conjunto" /><label>Japão</label>
+      <input type="checkbox" value="4" name="conjunto" /><label>China</label>
+
+      <br /><br />
+
+      <select>
+        <!-- Menu com opções para escolher -->
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+      </select>
+
+      <br />
+
+      <h1>Lista não ordenada</h1>
+      <!-- Título para a lista com bolinhas -->
+
+      <ul id="a">
+        <!-- Lista com bolinhas -->
+        <li>teste1</li>
+        <li>teste1</li>
+        <li>teste1</li>
+      </ul>
+
+      <br />
+
+      <h1>Lista ordenada</h1>
+      <!-- Título para a lista com números -->
+
+      <ol id="a">
+        <!-- Lista com números -->
+        <li>teste1</li>
+        <li>teste1</li>
+        <li>teste1</li>
+      </ol>
+      <br>
+      <dl>
+        <!-- Lista de definições (tipo dicionário) -->
+        <dt>Estado paraibano</dt>
+        <!-- Palavra principal -->
+
+        <dd>
+          <!-- Explicação ou itens relacionados -->
+          <li>Belém</li>
+          <li>João Pessoa</li>
+          <li>GBA</li>
+        </dd>
+      </dl>
+
+      <button id="enviar" type="submit">Logar</button>
+      <!-- Botão para enviar os dados do formulário -->
+
+      <button id="resetar" type="reset">Resetar</button>
+      <!-- Botão para limpar todos os campos do formulário -->
+    </form>
+
+    <table border="1px">
+      <h1>tabela</h1>
+      <tr><td>oi</td>><td>oi</td>><td>oi</td></tr>
+      <tr><td>oi</td>><td>oi</td>><td>oi</td></tr>
+      <tr><td>oi</td>><td>oi</td>><td>oi</td></tr>
+
+
+    </table>
+    <table>
+      <tr>descrição</tr>
+      <tr>preencha abaixo</tr>
+    </table>
+
+    <div
+      id="resultado"
+      style="margin-top: 20px; color: white; text-align: center"
+    ></div>
+    <!-- Área onde os dados preenchidos serão mostrados após o envio -->
+
+    <script>
+      // Aqui começa o código em JavaScript
+
+      const form = document.getElementById("FL");
+      // Pegando o formulário pelo ID
+
+      const resultado = document.getElementById("resultado");
+      // Pegando a área onde o resultado vai aparecer
+
+      const nome = document.getElementById("nome");
+      const senha = document.getElementById("senha");
+      // Pegando os campos de nome e senha
+
+      // Quando o formulário for enviado...
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        // Impede a página de recarregar ao enviar o formulário
+
+        // Mostra os dados na tela
+        resultado.innerHTML = `
+          <h2>Dados Recebidos:</h2>
+          <p><strong>Usuário:</strong> ${nome.value}</p>
+          <p><strong>Senha:</strong> ${senha.value}</p>
+        `;
+      });
+    </script>
+    <!-- Fim do JavaScript -->
+  </body>
+</html>

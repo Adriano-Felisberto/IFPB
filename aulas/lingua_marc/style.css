@@ -1,0 +1,21 @@
+body {
+    background-color: #808080;
+    text-align: center;
+    font-family: Arial;
+    font-size: 16px;
+    font: 16px;
+}
+input {
+    margin: 10px;
+    border-radius: 20px;
+    border: 10px;
+    cursor: pointer;
+    
+}
+button:hover {
+    margin: 10px;
+    border-radius: 20px;
+    border: 10px;
+    cursor: pointer;
+    background-color: blueviolet;
+}
