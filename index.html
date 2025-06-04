@@ -1,47 +1,202 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
   <head>
-    <meta charset="utf-8" />
-    <title>Página de Login</title>
-    <link rel="stylesheet" href="style.css" />
-    
+    <meta charset="UTF-8" />
+    <title>Menu da Prova</title>
+    <style>
+      body {
+        text-align: left;
+        font-family: "Times New Roman", Times, serif;
+        background-color: #d3d3d3;
+      }
+
+      table {
+        text-align: center;
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px auto;
+        border: 3px double black;
+      }
+
+      td,
+      th {
+        border: 1px solid black;
+        padding: 10px;
+      }
+
+      .menu-links a {
+        text-decoration: none;
+        color: blue;
+        font-weight: bold;
+      }
+
+      .imagem {
+        width: 100px;
+      }
+
+      .menu-superior {
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      #table2 {
+        width: 100%;
+        margin: 0 auto;
+        border: 3px double black;
+      }
+
+      #table2 td {
+        border: 1px solid black;
+      }
+
+      .left-cell {
+        width: 30%;
+        text-align: left;
+      }
+
+      .right-cell {
+        width: 70%;
+        text-align: left;
+      }
+
+      h1 {
+        margin-left: 5%;
+      }
+
+      p,
+      ul {
+        margin-left: 5%;
+      }
+      button {
+        text-align: left;
+        margin-top: 10px;
+      }
+      hr {
+        background-color: black;
+        height: 2px;
+        border: none;
+        margin: 20px 5%;
+      }
+    </style>
   </head>
-
   <body>
-    <h1>Página de LOGIN</h1>
+    <table>
+      <tr>
+        <th colspan="5" class="menu-superior">MENU DA PROVA</th>
+      </tr>
+      <tr>
+        <td class="imagem" rowspan="2">
+          <img
+            src="https://estudante.ifpb.edu.br/static/ps/imagens/ifpb-vertical.png"
+            alt="Logo IFPB"
+            width="80"
+          />
+        </td>
+        <td class="menu-links">
+          <a href="#"><u>HOME</u></a>
+        </td>
+        <u
+          ><td class="menu-links">
+            <a href="#"><u>CONTEUDO1</u></a>
+          </td></u
+        >
+        <u
+          ><td class="menu-links">
+            <a href="#"><u>CONTEUDO2</u></a>
+          </td></u
+        >
+        <u
+          ><td class="menu-links">
+            <a href="#"><u>CONTATO</u></a>
+          </td></u
+        >
+      </tr>
+      <tr>
+        <td colspan="4">
+          Dupla:Adriano Felisberto dos Santos e Israel da Silva Barbosa
+        </td>
+      </tr>
+    </table>
 
-    <form id="FL">
-        <label for="nome">Usuário:</label>
-        <input type="text" id="nome" name="nome" required>
-        <br><br>
+    <div>
+      <h1>Titulo1</h1>
+      <p>
+        <strong><em>Esse texto esta em negrito e em italico</em></strong>
+      </p>
 
-        <label for="Senha">Senha:</label>
-        <input type="password" id="Senha" name="Senha" required>
-        <br><br>
+      <ul>
+        <li>
+          <strong><u>Tarefas do dia de hoje</u></strong>
+        </li>
+        <ol>
+          <li>trabalhar</li>
+          <li>estudar</li>
+          <li>fazer a prova</li>
+        </ol>
+      </ul>
 
-        <button id="Enviar" type="submit">Logar</button>
-    </form>
-
-    <!-- Onde o "print" será mostrado -->
-    <div id="resultado" style="margin-top: 20px; color: white; text-align: center;"></div>
-    <script>
-        const form = document.getElementById("FL");
-const resultado = document.getElementById("resultado");
-
-const nome = document.getElementById("nome");
-const senha = document.getElementById("Senha"); // <-- agora com "s" minúsculo
-
-form.addEventListener("submit", function(event) {
-  event.preventDefault(); // Evita que a página recarregue
-
-  resultado.innerHTML = `
-    <h2>Dados Recebidos:</h2>
-    <p><strong>Usuário:</strong> ${nome.value}</p>
-    <p><strong>Senha:</strong> ${senha.value}</p>
-  `;
-});
-
-    </script>
-
+      <ul>
+        <li>
+          <strong><u>Tarefas do dia de amanha</u></strong>
+        </li>
+        <ol>
+          <li>dormir</li>
+          <li>acordar</li>
+          <li>dormir de novo</li>
+        </ol>
+      </ul>
+    </div>
+    <hr />
+    <div>
+      <h1>Titulo2</h1>
+      <form>
+        <table id="table2">
+          <tr>
+            <th colspan="2">FORM DA PROVA</th>
+          </tr>
+          <tr>
+            <td class="left-cell">NOME:</td>
+            <td class="right-cell"><input type="text" name="nome" /></td>
+          </tr>
+          <tr>
+            <td class="left-cell">LOGIN:</td>
+            <td class="right-cell"><input type="text" name="login" /></td>
+          </tr>
+          <tr>
+            <td class="left-cell">SENHA:</td>
+            <td class="right-cell"><input type="password" name="senha" /></td>
+          </tr>
+          <tr>
+            <td class="left-cell">GENERO:</td>
+            <td class="right-cell">
+              <input type="radio" name="genero" value="masculino" /> MASCULINO
+              <input type="radio" name="genero" value="feminino" /> FEMININO
+            </td>
+          </tr>
+          <tr>
+            <td class="left-cell">HOBBY:</td>
+            <td class="right-cell">
+              <input type="checkbox" /> ESPORTES
+              <input type="checkbox" /> MUSICA <input type="checkbox" /> CINEMA
+              <input type="checkbox" /> PRAIA
+            </td>
+          </tr>
+          <tr>
+            <td class="left-cell">NOME:</td>
+            <td class="right-cell">
+              <textarea
+                placeholder="comente aqui..."
+                rows="2"
+                cols="30"
+              ></textarea>
+            </td>
+          </tr>
+        </table>
+        <div>
+          <button type="reset">Limpar</button>
+          <button type="submit">Enviar</button>
+        </div>
+      </form>
+    </div>
   </body>
 </html>
