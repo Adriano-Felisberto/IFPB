@@ -1,8 +1,0 @@
-num1 = int(input("digite um número: "))
-num2 = int(input("digite um número: "))
-print(f"A soma: {num1+num2}")
-print(f"Multiplicação: {num1 * num2}")
-print(f"exponenciação: {num1 ** num2}")
-print(f"divisão: {num1 / num2}")
-print(f"divisão inteira: {num1 // num2}")
-print(f"resto daa divisão: {num1% num2}")
